@@ -1,0 +1,305 @@
+$blue-color: #1eacc7
+$red-pink: #ff5656
+$blue-footer: #1fbad6
+
+*
+  font-family: 'Roboto', sans-serif
+
+nav
+  position: fixed
+  width: 100%
+  height: 50px
+  background-color: #212121
+  z-index: 2
+
+.menu
+  display: flex
+  justify-content: space-between
+  padding: 13px 70px
+  margin: 0
+  list-style-type: none
+
+  .menu_link
+    color: #ffffff
+    font-size: 15px
+    font-weight: 300
+
+  .menu_item
+    border-right: 2px dotted black
+    padding-right: 28px
+
+header
+  position: relative
+
+.subheader
+  position: absolute
+  margin-top: 50px
+  width: 100%
+  height: 84px
+  background-color: #00000060
+
+  .subheader_logo
+    display: block
+    max-width: 100%
+    margin-top: 16px
+
+  .subheader-underlogo-text
+    margin-top: 6px
+    height: 13px
+    opacity: 0.5
+    color: #ffffff
+    font-size: 13px
+    font-weight: 400
+
+  .subheader_call
+    text-align: right
+    margin-top: 19px
+    color: #ffffff
+    font-size: 12px
+    font-weight: 300
+
+  .subheader_phone
+    margin-top: 8px
+    text-align: right
+    display: block
+    color: #ffffff
+    font-size: 22px
+    font-weight: 00
+    line-height: 20px
+    text-transform: uppercase
+
+  .subheader_btn
+    margin-top: 19px
+    width: 172px
+    height: 46px
+    border: 0
+    border-radius: 4px
+    box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12)
+    background-image: linear-gradient(to top, $blue-color 0%, #4ce2ff 100%)
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
+    color: #ffffff
+    font-size: 14px
+    font-weight: 400
+    text-align: center
+    text-transform: uppercase
+
+.promo
+  min-height: 800px
+  background: url("../img/promo_background.jpg") center (center / cover) no-repeat
+  padding: 150px 0 135px
+
+  .promo_header
+    margin: 0
+    color: #ffffff
+    font-size: 60px
+    line-height: 60px
+    font-weight: 700
+    text-align: center
+    text-transform: uppercase
+
+  .promo_subheader
+    margin: 0
+    margin-top: 22px
+    color: #ffffff
+    font-size: 36px
+    line-height: 36px
+    font-weight: 700
+    text-align: center
+    text-transform: uppercase
+
+  .promo_descr
+    margin-top: 23px
+    color: #ffffff
+    font-size: 18px
+    font-weight: 400
+    letter-spacing: normal
+    line-height: 24px
+    text-align: center
+
+  .promo_btn
+    display: block
+    margin: 118px auto 0
+
+
+    width: 259px
+    height: 63px
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12)
+    border: 0px
+    border-radius: 4px
+    background-image: linear-gradient(to top, $blue-color 0%, #4ce2ff 100%)
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
+    color: #ffffff
+    font-size: 18px
+    font-weight: 400
+    font-style: normal
+    letter-spacing: normal
+    text-align: center
+    text-transform: uppercase
+
+.label
+  margin: 0 auto
+  width: 112px
+  height: 24px
+  background-color: #000000
+  color: #ffffff
+  font-size: 11px
+  line-height: 24px
+  font-weight: 400
+  text-align: center
+  vertical-align: center
+  text-transform: uppercase
+
+.title
+  display: block
+  margin: 38px auto 0
+  color: #222222
+  font-size: 38px
+  font-weight: 700
+  line-height: 38px
+  text-align: center
+  text-transform: uppercase
+
+.subtitle
+  margin: 0 auto
+  margin-top: 19px
+  width: 795px
+  height: 17px
+  color: #222222
+  font-size: 17px
+  font-weight: 400
+  font-style: normal
+  letter-spacing: normal
+  line-height: 17px
+  text-align: center
+
+.advantages
+  min-height: 900px
+  padding: 71px 0 68px
+
+  .advantages_cards
+    margin-top: 5px
+    padding: 0 43px 0 35px
+
+  .advantages_card
+    margin-top: 35px
+    display: flex
+    justify-content: center
+    align-items: center
+
+  .card_icon_container
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 113px
+    height: 113px
+    margin: 0
+    flex: 0 0 113px
+    background-color: $blue-color
+    border-radius: 50%
+
+    .card_icon
+      max-width: 100%
+
+  .card_text_container
+    margin-left: 26px
+    width: 341px
+
+  .card_title
+    color: $blue-color
+    font-size: 17px
+    line-height: 17px
+    font-weight: 400
+    font-style: normal
+    letter-spacing: normal
+
+  .card_descr
+    margin-top: 15px
+    color: #202020
+    font-size: 14px
+    line-height: 15px
+    font-weight: 300
+
+.app
+  min-height: 864px
+  padding: 48px 0 80px
+  background: url("../img/app_background.png") center (center / cover ) no-repeat
+
+  .row
+    margin-top: 32px
+
+  &_item
+    position: relative
+    width: 320px
+    height: 280px
+    //opacity: 0.9
+    margin: 0 auto
+    margin-bottom: 19px
+    &_1
+      background: url("../img/app_screen_1.png") center (center / cover ) no-repeat
+    &_2
+      background: url("../img/app_screen_2.png") center (center / cover ) no-repeat
+    &_3
+      background: url("../img/app_screen_3.png") center (center / cover ) no-repeat
+    &_4
+      background: url("../img/app_screen_4.png") center (center / cover ) no-repeat
+    &_5
+      background: url("../img/app_screen_5.png") center (center / cover ) no-repeat
+    &_6
+      background: url("../img/app_screen_6.png") center (center / cover ) no-repeat
+    &_subtitle
+      padding-top: 92px
+      color: #ffffff
+      font-size: 24px
+      font-weight: 400
+      font-style: normal
+      letter-spacing: normal
+      line-height: 24px
+      text-align: center
+      text-transform: uppercase
+    &_plus
+      display: flex
+      justify-content: center
+      align-items: center
+
+      position: absolute
+      bottom: 35px
+      left: 50%
+      transform: translateX(-50%)
+
+      width: 26px
+      height: 26px
+      background-color: #000000
+      border-radius: 50%
+      cursor: pointer
+.capabilities
+  min-height: 896px
+  padding-top: 57px
+  background-color: #070716
+
+  .label
+    background: white
+    color: #070716
+  .title, .subtitle
+    color: white
+
+  &_footer
+    margin-top: 323px
+    min-height: 397px
+    padding-bottom: 138px
+    background: url("../img/app_background.png") center (center / cover) no-repeat
+    &_car
+      max-width: 759px
+      margin: 0 auto
+      img
+        margin-top: -267px
+        width: 100%
+    .subtext
+      margin: 0 auto
+      margin-top: 4px
+      color: #222222
+      font-size: 17px
+      font-weight: 300
+      line-height: 17px
+      text-align: center
+
+
