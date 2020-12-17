@@ -10,6 +10,10 @@ nav {
   z-index: 2;
 }
 
+.hamburger {
+  display: none;
+}
+
 .menu {
   display: flex;
   justify-content: space-between;
@@ -17,14 +21,17 @@ nav {
   margin: 0;
   list-style-type: none;
 }
-.menu .menu_link {
+.menu_link {
   color: #ffffff;
   font-size: 15px;
   font-weight: 300;
 }
-.menu .menu_item {
+.menu_item {
   border-right: 2px dotted black;
   padding-right: 28px;
+}
+.menu_item:last-child {
+  border-right: none;
 }
 
 header {
@@ -43,7 +50,7 @@ header {
   max-width: 100%;
   margin-top: 16px;
 }
-.subheader-underlogo-text {
+.subheader_underlogo-text {
   margin-top: 6px;
   height: 13px;
   opacity: 0.5;
@@ -172,8 +179,6 @@ header {
 .subtitle {
   margin: 0 auto;
   margin-top: 19px;
-  width: 795px;
-  height: 17px;
   color: #222222;
   font-size: 17px;
   font-weight: 400;
@@ -187,11 +192,11 @@ header {
   min-height: 900px;
   padding: 71px 0 68px;
 }
-.advantages .advantages_cards {
+.advantages_cards {
   margin-top: 5px;
   padding: 0 43px 0 35px;
 }
-.advantages .advantages_card {
+.advantages_card {
   margin-top: 35px;
   display: flex;
   justify-content: center;
@@ -208,7 +213,7 @@ header {
   background-color: #1eacc7;
   border-radius: 50%;
 }
-.advantages .card_icon_container .card_icon {
+.advantages .card_icon {
   max-width: 100%;
 }
 .advantages .card_text_container {
@@ -493,11 +498,367 @@ header {
   height: 32px;
   background-color: #070716;
   border-radius: 50%;
+  color: white;
+  text-decoration: none;
 }
 .footer_apps {
   position: absolute;
   right: 0;
   top: 52px;
+}
+
+.xs-visible {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .menu_item {
+    padding-right: 20px;
+  }
+  .menu_link {
+    font-size: 13px;
+  }
+
+  .promo_header {
+    font-size: 50px;
+  }
+  .promo_subheader {
+    font-size: 28px;
+  }
+  .promo_descr {
+    margin-top: 70px;
+  }
+
+  .advantages_card {
+    align-items: flex-start;
+  }
+
+  .app_item {
+    width: 300px;
+  }
+
+  .footer_apps, .footer_social {
+    top: 110px;
+  }
+}
+@media (max-width: 991px) {
+  .menu_item {
+    padding-right: 10px;
+  }
+  .menu_link {
+    font-size: 10px;
+  }
+
+  .subheader_logo img {
+    width: 100%;
+  }
+  .subheader_underlogo-text {
+    font-size: 11px;
+  }
+  .subheader_phone {
+    font-size: 18px;
+  }
+  .subheader_btn {
+    margin-top: 21px;
+    width: 100%;
+    height: 40px;
+  }
+
+  .promo_header {
+    font-size: 40px;
+  }
+  .promo_subheader {
+    font-size: 30px;
+  }
+  .promo_descr {
+    margin-top: 70px;
+  }
+
+  .advantages_card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .advantages_card .card_text_container {
+    margin-top: 20px;
+    width: 300px;
+  }
+
+  .app_item {
+    width: 220px;
+    height: 220px;
+  }
+  .app_item_subtitle {
+    padding: 50px 15px 0;
+    font-size: 16px;
+  }
+
+  .footer_apps, .footer_social {
+    position: relative;
+    right: inherit;
+    top: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .menu {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100vh;
+    padding: 20px 15px;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.6s all;
+  }
+  .menu_active {
+    left: 0;
+  }
+  .menu_item {
+    padding-right: 0;
+    border: none;
+    margin: 10px 0;
+  }
+  .menu_link {
+    font-size: 20px;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 12px;
+  }
+  .hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 4px;
+    transition: 0.5s all;
+  }
+  .hamburger_active span {
+    margin-bottom: -2px;
+  }
+  .hamburger_active span:nth-child(1) {
+    transform: translateY(3px) rotate(-45deg);
+  }
+  .hamburger_active span:nth-child(2) {
+    background-color: transparent;
+  }
+  .hamburger_active span:nth-child(3) {
+    transform: translateY(3px) rotate(45deg);
+  }
+
+  .xs-hidden {
+    display: none;
+  }
+
+  .xs-visible {
+    display: block;
+  }
+
+  .subheader_phone {
+    display: block;
+    margin-top: 10px;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .subheader_btn {
+    display: block;
+    height: 40px;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  .promo_header {
+    line-height: 45px;
+  }
+
+  .footer {
+    position: relative;
+    right: inherit;
+    top: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 575px) {
+  nav {
+    height: 30px;
+  }
+
+  .subheader {
+    margin-top: 30px;
+    height: 60px;
+  }
+  .subheader_underlogo-text {
+    display: none;
+  }
+  .subheader_logo {
+    margin-top: 17px;
+  }
+  .subheader_phone {
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .subheader_btn {
+    width: 110px;
+    height: 22px;
+    font-size: 10px;
+    margin-top: 6px;
+  }
+
+  .promo {
+    min-height: 400px;
+    padding: 146px 0 35px;
+  }
+  .promo_descr {
+    display: none;
+  }
+  .promo_header {
+    font-size: 30px;
+    padding: 0 24px;
+    line-height: 35px;
+  }
+  .promo_subheader {
+    font-size: 20px;
+    margin-top: 33px;
+    padding: 10px;
+    line-height: 30px;
+  }
+  .promo_btn {
+    width: 210px;
+    height: 50px;
+    margin: 72px auto 0;
+  }
+
+  .app_items {
+    margin-top: 27px;
+  }
+  .app_item {
+    width: 290px;
+    height: 254px;
+  }
+  .app_item_subtitle {
+    font-size: 16px;
+    padding: 81px 40px 0;
+    line-height: 31px;
+  }
+
+  .menu {
+    width: 85%;
+  }
+  .menu_item {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+  }
+  .menu_link {
+    display: block;
+  }
+
+  .advantages {
+    padding: 22px 0 36px;
+  }
+  .advantages_card {
+    margin-top: 26px;
+  }
+  .advantages_card .card_icon_container {
+    width: 100px;
+    height: 100px;
+    flex: 0 0 100px;
+  }
+  .advantages_card .card_text_container {
+    margin-top: 27px;
+  }
+  .advantages_card .card_title {
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 16px;
+    margin-top: 15px;
+    line-height: 16px;
+  }
+
+  .capabilities {
+    padding: 25px 0 33px;
+    min-height: 390px;
+  }
+  .capabilities .title, .capabilities .subtitle {
+    display: none;
+  }
+  .capabilities_footer {
+    min-height: 0;
+    padding-bottom: 0;
+  }
+  .capabilities_footer_car img {
+    margin-top: -400px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .capabilities .subtext {
+    margin-top: -95px;
+    color: white;
+  }
+
+  .requires {
+    padding: 25px 0 25px;
+  }
+  .requires_conditions, .requires_requirements {
+    margin-top: 31px;
+  }
+  .requires_conditions_list, .requires_requirements_list {
+    padding-left: 33px;
+  }
+
+  .cities {
+    min-height: 360px;
+  }
+  .cities .container {
+    padding: 25px 0 35px;
+  }
+  .cities_link {
+    margin-top: 216px;
+  }
+
+  .footer_main_menu {
+    width: 300px;
+  }
+  .footer_sub_menu {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 244px;
+  }
+  .footer_sub_menu a {
+    padding: 0 15px 0;
+    line-height: 25px;
+  }
+  .footer_apps, .footer_social {
+    position: relative;
+    right: inherit;
+    top: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
