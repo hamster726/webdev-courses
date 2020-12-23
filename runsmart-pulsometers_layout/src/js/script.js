@@ -1,18 +1,22 @@
-$(document).ready(function () {
-    $('.carousel__inner').slick({
-        // adaptiveHeight: true,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        prevArrow: '<button type="button" class="slick-prev"><img src="../icons/carousel_left.svg"/></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="../icons/carousel_right.svg"/></button>',
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    dots: true,
-                    arrows: false
-                }
-            }
-        ]
-    });
+const slider = tns({
+    container: '.carousel__inner',
+    items: 1,
+    slideBy: 'page',
+    autoplay: true,
+    autoplayTimeout: 4000,
+    autoplayHoverPause: true, // have a bug
+    controls: false,
+    autoplayButtonOutput: false,
+    nav: false,
+    touch: true,
+    mouseDrag: true, // have a bug with autoplayHoverPause
+    swipeAngle: false,
+    autoHeight: true
+});
+
+document.querySelector('.prev').addEventListener('click', function () {
+    slider.goTo('prev');
+});
+document.querySelector('.next').addEventListener('click', function () {
+    slider.goTo('next');
 });
