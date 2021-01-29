@@ -3,20 +3,20 @@
 const slider = tns({
     container: '.carousel__inner',
     items: 1,
-    slideBy: 'page',
-    autoplay: false,
-    // autoplayTimeout:4000
-    autoplayHoverPause: true, // have a bug
-    controls: false,
+    slideBy: 1,
+
+    autoplay: true,
+    autoplayTimeout:4000,
     autoplayButtonOutput: false,
-    nav: false,
+    autoplayHoverPause: true,
+    controls: false,
+    rewind: true,
     touch: true,
-    mouseDrag: true, // have a bug with autoplayHoverPause
     swipeAngle: false,
-    autoHeight: false
 });
 
 document.querySelector('.prev').addEventListener('click', function () {
+
     slider.goTo('prev');
 });
 document.querySelector('.next').addEventListener('click', function () {
