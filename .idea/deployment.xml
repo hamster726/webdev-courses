@@ -2,7 +2,7 @@
 <project version="4">
   <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
-      <paths name="Microlab">
+      <paths name="microlab_magnikon.ua">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

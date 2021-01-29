@@ -1,0 +1,253 @@
+//container
+
+@media screen and (max-width: $wh-large)
+  .container
+    padding: 0 20px
+@media screen and (max-width: $wh-x-small)
+  .container
+    padding: 0 10px
+
+//buttons
+@media screen and (max-width: $wh-medium)
+  .button
+    font-size: 16px
+    width: 180px
+    height: 40px
+    margin-top: 10px
+    &_main
+      margin-top: 67px
+      width: 300px
+      height: 50px
+    &_submit
+      width: 100%
+      height: 50px
+    &_mini
+      width: 130px
+      height: 40px
+      font-size: 16px
+
+//pageup
+
+@media screen and (max-width: $wh-small)
+  .pageup
+    height: 60px
+    width: 60px
+    opacity: 0.75
+
+//modal
+@media screen and (max-width: $wh-small)
+  .overlay
+    .modal
+      &__close
+        top: 0px
+        font-size: 50px
+        right: 0px
+        vertical-align: center
+        text-align: center
+
+//header
+
+@media screen and (max-width: $wh-medium)
+  .header
+    &__logo
+      width: 280px
+    &__official
+      font-size: 18px
+      span
+        font-size: 22px
+@media screen and (max-width: $wh-small)
+  .header
+    &__logo
+      flex: 20%
+      img
+        max-width: 200px
+    &__official
+      display: none
+    &__contacts
+      flex: 25%
+@media screen and (max-width: $wh-x-small)
+  .header
+    flex-direction: column
+    align-items: flex-end
+    &__logo
+      display: flex
+      justify-content: center
+    &__contacts
+      display: flex
+      margin-top: 20px
+      justify-content: flex-end
+
+//promo
+
+@media screen and (max-width: $wh-medium)
+  .promo
+    &__wrapper
+      align-items: center
+    &__header
+      font-size: 46px
+    &__icon
+      font-size: 16px
+      width: 130px
+@media screen and (max-width: $wh-small)
+  .promo
+    &__header
+      font-size: 40px
+      text-align: center
+    &__subheader
+      font-size: 20px
+    &__icon
+      width: 100px
+@media screen and (max-width: $wh-x-small)
+  .promo
+    &__wrapper
+      margin-top: 30px
+    &__header
+      font-size: 35px
+      text-align: center
+    &__subheader
+      font-size: 20px
+      text-align: center
+    &__icons
+      justify-content: center
+    &__icon
+      margin: 0 15px 20px
+      font-size: 14px
+
+//advantages
+
+@media screen and (max-width: $wh-small)
+  .advantages
+    &__icon
+      width: 75px
+    &__subtitle
+      font-size: 20px
+    &__descr
+      font-size: 16px
+      text-align: justify
+      width: 280px
+
+//consultation
+
+@media screen and (max-width: $wh-medium)
+  .consultation
+    display: flex
+    justify-content: center
+    .title
+      text-align: center
+      font-size: 30px
+    &__descr
+      margin: 60px auto 0
+      text-align: center
+    .feed-form
+      margin: 36px auto 0
+@media screen and (max-width: $wh-small)
+  .consultation
+    display: flex
+    justify-content: center
+    .title
+      text-align: center
+      font-size: 32px
+    &__descr
+      margin: 50px auto 0
+      text-align: center
+      width: 300px
+      font-size: 18px
+    .feed-form
+      margin: 36px auto 0
+@media screen and (max-width: $wh-x-small)
+  .consultation
+    padding: 80px 0 80px
+    .title
+      font-size: 20px
+
+//feed form
+
+//carousel
+
+@media screen and (max-width: $wh-large)
+  .carousel
+    .prev
+      left: -20px
+    .next
+      right: -20px
+@media screen and (max-width: $wh-medium)
+  .carousel
+    .prev, .next
+      height: 100%
+      img
+        opacity: 0.5
+    .prev
+      left: 0
+    .next
+      right: 0
+    .tns-item
+      img
+        width: 100%
+@media screen and (max-width: $wh-x-small)
+  .carousel
+    .prev,.next
+      display: none
+
+//catalog
+@media screen and (max-width: $wh-x-small)
+  .catalog
+    &__tabs
+      flex-direction: column
+      margin-top: 40px
+    &__tab
+      margin-bottom: 15px
+//reviews
+
+@media screen and (max-width: $wh-small)
+  .reviews
+    &__card
+      //flex-direction: column
+      border-bottom: 1px solid lightgray
+    &__text
+      margin-left: 20px
+    &__avatar
+      width: 100px
+      height: 100px
+
+@media screen and (max-width: $wh-x-small)
+  .reviews
+    &__card
+      flex-direction: column
+    &__avatar
+      margin: 0 auto
+    &__text
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-left: 0
+    &__title
+      text-align: center
+    &__subtitle
+      text-align: center
+    &__descr
+      margin-top: 20px
+      width: 280px
+      text-align: justify
+
+//footer
+
+@media screen and (max-width: $wh-small)
+  .footer
+    min-height: 500px
+    iframe
+      min-height: 500px
+@media screen and (max-width: $wh-x-small)
+  .footer
+    &__info
+      width: 320px
+      height: 240px
+    &__address
+      font-size: 16px
+    &__phone
+      font-size: 16px
+      margin: 25px auto 0
+    &__social
+      margin-top: 25px
+      &-item
+        width: 40px
+        height: 40px

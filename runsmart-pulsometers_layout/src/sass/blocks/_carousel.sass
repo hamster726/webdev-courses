@@ -13,11 +13,18 @@
     left: -66px
     border: none
     background-color: transparent
+    z-index: 10
+    height: 100%
+    width: 80px
+    transition: 0.2s background-color
+    &:hover
+      background-color: #4a4a4a50
+    &:focus
+      outline: 0
+
     img
       width: 31px
       height: 50px
-    &:hover
-      border: 0
   .next
     right: -66px
     left: auto

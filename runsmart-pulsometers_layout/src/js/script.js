@@ -1,11 +1,11 @@
-// Slider
+// tiny-slider
 
 const slider = tns({
     container: '.carousel__inner',
     items: 1,
     slideBy: 'page',
-    autoplay: true,
-    autoplayTimeout: 4000,
+    autoplay: false,
+    // autoplayTimeout:4000
     autoplayHoverPause: true, // have a bug
     controls: false,
     autoplayButtonOutput: false,
@@ -23,7 +23,7 @@ document.querySelector('.next').addEventListener('click', function () {
     slider.goTo('next');
 });
 
-// Tabs
+// TABS
 
 $(document).ready((function () {
     $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function () {
@@ -33,7 +33,7 @@ $(document).ready((function () {
     });
 
 
-// Tabs slider
+// TABS SLIDER
 
     function toggleSlider(item) {
         $(item).each(function (i) {
@@ -48,7 +48,7 @@ $(document).ready((function () {
     toggleSlider('.catalog-item__back');
     toggleSlider('.catalog-item__link');
 
-// Modal
+// MODAL
 
     $('[data-modal=consultation]').on('click', function () {
         $('.overlay, #consultation').fadeIn(100);
@@ -65,7 +65,7 @@ $(document).ready((function () {
         })
     });
 
-// validate forms
+// VALIDATE FORMS
 
     function validateForms(form) {
         $(form).validate({
@@ -122,7 +122,8 @@ $(document).ready((function () {
         return false;
     });
 
-// smooth scroll and pageup
+// SMOOTH SCROLL AND PAGEUP
+
     $(window).scroll(function () {
         if ($(this).scrollTop() > 1600) {
             $('.pageup').fadeIn(300);
